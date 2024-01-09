@@ -1,6 +1,6 @@
 FROM alpine:latest
 
-ARG SHAIRPORT_BRANCH 4.3.2
+ENV shairport_version 4.3.2
 
 RUN apk -U add \
         git \
@@ -14,11 +14,9 @@ RUN apk -U add \
         libressl-dev \
         avahi-dev \
         libconfig-dev \
-
  && cd /root \
- && git clone -b "$SHAIRPORT_BRANCH" -c advice.detachedHead=false --single-branch --depth 1 https://github.com/mikebrady/shairport-sync.git \
+ && git clone -b ${shairport_version} -c advice.detachedHead=false --single-branch --depth 1 https://github.com/mikebrady/shairport-sync.git \
  && cd shairport-sync \
-
  && autoreconf -i -f \
  && ./configure \
         --with-pipe \
@@ -28,7 +26,6 @@ RUN apk -U add \
         --with-metadata \
  && make \
  && make install \
-
  && cd / \
  && apk --purge del \
         git \
