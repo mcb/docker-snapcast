@@ -10,7 +10,7 @@
 ## Usage 
 
 1. Pull from ghcr.io
-2. It will need both requirements.txt and mopidy.conf, edit both if you want to add/remove plugins
+2. It will need a mounted volume to access the stream from mopidy as well as the actual pipe. Example configuration in [Streaming Audio](https://github.com/mcb/streaming-audio)
 
 ## License
 MIT License
