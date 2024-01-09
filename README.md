@@ -1,11 +1,11 @@
-# docker-snapcast
+# docker-snapcast (whith shairplay-sync support)
 
 [**Snapcast**](https://github.com/badaix/snapcast) Docker image based on [**Alpine Linux**](https://www.alpinelinux.org/).
 
 ## Features:
 - Based on Alpine Linux: smaller than a debian based image.
 - Runs on Raspberry Pi (tested on Model 4B), other packages available
-- Uses the latest snapcast version from archlinux repo  
+- Uses the latest snapcast/shairplay-sync version from archlinux repo  
 
 ## Usage 
 

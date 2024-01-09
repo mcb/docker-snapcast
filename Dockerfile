@@ -1,7 +1,5 @@
 FROM alpine:latest
 
-RUN apk add --no-cache snapcast-server
-
-EXPOSE 1704
+RUN apk add --no-cache snapcast-server shairport-sync
 
 ENTRYPOINT ["snapserver"]
