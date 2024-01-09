@@ -1,5 +1,5 @@
-#!/bin/bash
-rm -f /var/run/dbus/pid
+#!/bin/sh
+rm -f /run/dbus/dbus.pid
 rm -f /var/run/avahi-daemon/pid
 
 dbus-daemon --system 
